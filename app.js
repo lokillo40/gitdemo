@@ -1,10 +1,6 @@
-const ul = document.querySelector("ul");
+const header = document.querySelector("h1");
+const letters = header.querySelectorAll(".letter");
 
-ul.addEventListener("click", function(event) {
-  const selectedElement = event.target;
-  console.log("see all data attributes", selectedElement.dataset);
-  console.log(
-    "see one data attribute",
-    selectedElement.getAttribute("data-model")
-  );
+letters.forEach((letter, index) => {
+  letter.style.color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 });
